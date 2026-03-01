@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "theme": "professional",
+    "lastModified": "2025-04-04T06:59:24.305Z"
+  },
+  "basics": {
+    "name": "Luis Enrique Torres Cervantes",
+    "label": "Jr Systems Engineer & Jr Web Developer",
+    "summary": "JUNIOR FULL-STACK DEVELOPER Systems Engineer focused on software development. Practical experience developing web modules integrated with enterprise SQL Server databases within corporate infrastructure, supporting internal business processes.",
+    "website": "noname.com",
+    "url": "http://localhost:5173",
+    "email": "torrescervantesle@gmail.com",
+    "profiles": [
+      {
+        "username": "Enrique Torres",
+        "network": "LinkedIn",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/3840px-LinkedIn_icon.svg.png",
+        "url": "https://www.linkedin.com/in/luis-enrique-torres-cervantes-615b55355/"
+      },
+      {
+        "username": "twodigitss",
+        "network": "GitHub",
+        "icon": "https://github.com/favicon.ico",
+        "url": "https://github.com/twodigitss"
+      }
+    ]
+  },
+  "education": [
+    {
+      "endDate": "2026-05-00",
+      "startDate": "2021-08-00",
+      "area": "Systems Engineering",
+      "studyType": "Degree",
+      "institution": "Instituto Tecnologico Superior de Apatzingan"
+    },{
+      "endDate": "2021-00-00",
+      "startDate": "2019-00-00",
+      "area": "Pre-university Studies in Exact Sciences",
+      "studyType": "Bachelors",
+      "institution": "Bachilleres Plantel Apatzingan"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Soft skills",
+      "level": "Junior",
+      "keywords": [
+        "Adaptability",
+        "Proactivity",
+        "Professional attitude",
+        "Willingness to learn",
+        "Initiative"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "level": "Junior",
+      "keywords": [
+        "Javascript / Typescript / JSX ",
+        "React.js", "Angular 17+",
+        "HTML / SCSS / CSS / Tailwind / Styled Components"
+      ]
+    },
+    {
+      "name": "Backend",
+      "level": "Junior",
+      "keywords": [
+        "Java / Python / C# ",
+        "ASP.NET Core / Flask"
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "Junior",
+      "keywords": [
+        "Swift"
+      ]
+    },
+    {
+      "name": "Version Control",
+      "level": "Advanced",
+      "keywords": [
+        "GitHub",
+        "Git"
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "level": "Advanced",
+      "keywords": [
+        "AI",
+        "Machine Learning"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Coding Cup Tecnm Apatzingan",
+      "awarder": "TecNM Mexico",
+      "date": "2023-00-00",
+      "summary": "Led team of 3 developers, solving 10 algorithmic challenges in 4 hours, competing against 3 teams from the Instituto Tecnologico Superior Apatzingan."
+    }
+  ],
+  "work": [
+    {
+      "name": "Process Automations",
+      "company":"Arcelormittal Mexico",
+      "summary": "Developed a web-based budget capture module integrated with an enterprise SQL Server database to standardize internal budgeting workflows, enabling structured data capture and version control for budget change requests and approvals.",
+      "website": "https://mexico.arcelormittal.com/",
+      "position": "Full Stack Developer",
+      "startDate": "2025-08-15",
+      "highlights": [
+        "Typescript, Angular 17, SQL Server, C#, ASP.NET Core"
+      ]
+    },
+    {
+      "name": "Web-based static 3D visualization module",
+      "company":"Arcelormittal Mexico",
+      "summary": "Developed a web-based static 3D visualization module for ArcelorMittal GO (AMGO) using Three.js. Displayed operational information from multiple areas of ArcelorMittal Mexico to support personnel orientation and route planning",
+      "website": "https://mexico.arcelormittal.com/",
+      "position": "Web Developer",
+      "startDate": "2025-08-15",
+      "highlights": [
+        "Typescript, Angular 17, Three.js"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pageper – Browser Extension",
+      "description": "Developed a minimalist, distraction-free homepage, published on the official Firefox extension store. Implemented dynamic data loading using JSON files and state management with React. Automated build and packaging workflows using Shell scripts to optimize testing and deployment.",
+      "website": "https://addons.mozilla.org/es-MX/firefox/addon/pageper/",
+      "startDate": "2025-03-08",
+      "highlights": [
+        "Javascript, React.js, HTML, CSS"
+      ]
+    },
+    {
+      "name": "Developed an IoT-based irrigation system",
+      "description": "Developed an IoT-based irrigation system prototype using scheduled automation and real-time sensor data to control watering processes Aimed to reduce manual labor, Optimized water usage Provided a low-cost, customizable solution for greenhouse environments",
+      "website": "",
+      "startDate": "2024-09-00",
+      "highlights": [
+        "Python, Html, Javascript, Firebase, Esp32 (IoT)"
+      ]
+    },
+    {
+      "name": "Delfin Research Summer",
+      "description": "Conducted a six-week research fellowship focused on Brain-Computer Interface (BCI) applications and real-time device manipulation using Machine Learning (Scikit-learn) Achieved 80% of accuracy on BCI predictions",
+      "website": "",
+      "startDate": "2025-05-00",
+      "highlights": [
+        "Python, Scikit-learn, Machine Learning, IoT"
+      ]
+    }
+  ],
+  "languages": [
+    { "language": "English", "fluency": "B2 MCER" },
+    { "language": "Spanish", "fluency": "Native speaker" }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "keywords": [
+        "Learning music production"
+      ]
+    },
+    {
+      "name": "Programming",
+      "keywords": [
+        "spare time"
+      ]
+    }
+  ]
+}

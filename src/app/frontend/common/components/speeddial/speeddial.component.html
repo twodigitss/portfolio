@@ -1,0 +1,33 @@
+<div class="fixed w-80 h-80 overflow-hidden">
+
+  <button
+    (click)="toggle()"
+    class="absolute top-10 left-10 w-10 h-auto aspect-square rounded-full bg-stone-300 text-black text-2xl flex items-center justify-center z-20"
+  >
+    <ng-icon
+      [svg]="excludedIcons.tablerCategory2"
+      size="20" strokeWidth="2"
+      class="cursor-pointer"
+    />
+  </button>
+
+  <div class="absolute top-10 left-10 z-10">
+    @for (item of icons.keys(); track $index; let i = $index) {
+    <button
+      class="absolute w-10 h-auto aspect-square rounded-full bg-stone-100 flex items-center justify-center text-xl transition-all duration-300"
+      [style.transform]="open() ? 'translate(' + positions()[i].x + 'px,' + positions()[i].y + 'px)' : 'translate(0,0)'"
+      [style.opacity]="open() ? 1 : 0"
+      [routerLink]="[ '/' + item ]"
+    >
+      <abbr title="{{item}}">
+        <ng-icon
+          [svg]="icons.get(item)"
+          size="20" strokeWidth="2"
+          class="cursor-pointer"
+        />
+      </abbr>
+    </button>
+    }
+  </div>
+
+</div>
