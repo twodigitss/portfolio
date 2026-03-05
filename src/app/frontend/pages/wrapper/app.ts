@@ -13,5 +13,4 @@ import { SpeedDialComponent  } from "../../common/components/speeddial/speeddial
   ],
 })
 export class App {
-  protected readonly title = signal('bookman');
 }

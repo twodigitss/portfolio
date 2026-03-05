@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal, computed } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
-import { tablerDotsVertical, tablerCategory2, tablerSmartHome, tablerFileCv, tablerShoppingCart } from '@ng-icons/tabler-icons';
+import { tablerDotsVertical, tablerCategory2, tablerSmartHome, tablerFileCv, tablerShoppingCart, tablerFileText } from '@ng-icons/tabler-icons';
 
 @Component({
   selector: 'app-speed-dial',

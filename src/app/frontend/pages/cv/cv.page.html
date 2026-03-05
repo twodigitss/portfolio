@@ -1,73 +1,67 @@
-<div class="grid px-72 py-12 print:p-4">
-  <!-- Header: Name and Contact Info -->
-  <header class="text-center grid mb-8 gap-3">
-    <div class="grid">
-      <h1 class="text-4xl font-bold">{{cv.basics.name}}</h1>
-      <h2 class="text-xl font-bold">{{cv.basics.label}}</h2>
-    </div>
+<main class="flex min-h-screen items-center self-center py-12 font-['IBM Plex Sans'] text-justify">
+  <span class="flex items-start gap-8">
 
-    <div class="text-lg flex items-center justify-center gap-6">
-      <a class="flex gap-2 items-center" [href]="'mailto:' + cv.basics.email">
-        <ng-icon [svg]="icons.tablerMail" size="20" strokeWidth="2" class="cursor-pointer" />
-        {{cv.basics.email}}
-      </a>
-      <a class="flex gap-2 items-center" [href]="cv.basics.profiles[0].url"><img class="w-5 h-5" src="{{cv.basics.profiles[0].icon}}" alt="{{cv.basics.profiles[0].network}}" />  {{cv.basics.profiles[0].network}}</a>
-      <a class="flex gap-2 items-center" [href]="cv.basics.profiles[1].url"><img class="w-5 h-5" src="{{cv.basics.profiles[1].icon}}" alt="{{cv.basics.profiles[1].network}}" />  {{cv.basics.profiles[1].network}}</a>
-    </div>
-  </header>
+    <article #LEFT_SIDE class="grid gap-6">
+      <section #ABOUTME>
+        <h2 class="text-lg font-normal mb-2 ">About Me</h2>
+        <p class="font-extralight text-sm">{{cv.basics.summary}}</p>
+      </section>
 
-  <!-- About Me / Summary -->
-  <section class="mb-8">
-    <h2 class="text-2xl font-semibold mb-2 border-b border-gray-300 pb-2">About Me</h2>
-    <p>{{cv.basics.summary}}</p>
-  </section>
-
-  <!-- Projects / Experience -->
-  <section class="mb-8">
-    <h2 class="text-2xl font-semibold mb-2 border-b border-gray-300 pb-2">Projects / Experience</h2>
-
-    @for (item of cv.work; track $index) {
-      <div class="mb-4">
-        <h3 class="text-xl font-medium">{{item.name}}</h3>
-        <p class="text-gray-600">{{item.company}} | {{item.startDate}}</p>
-        <ul class="list-disc ml-6">
-          <li>{{item.summary}}</li>
-          <li>{{item.highlights[0]}}</li>
-        </ul>
-      </div>
-    }
-
-    @for (item of cv.projects; track $index) {
-      <div class="mb-4">
-        <h3 class="text-xl font-medium">{{item.name}}</h3>
-        <ul class="list-disc ml-6">
-          <li>{{item.description}}</li>
-          <li>{{item.highlights[0]}}</li>
-        </ul>
-      </div>
-    }
-
-  </section>
-
-  <!-- Education (Optional but common) -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-2 border-b border-gray-300 pb-2">Education</h2>
-      @for (item of cv.education; track $index) {
+      <section #EDUCATION>
+        <h2 class="text-lg font-normal mb-2 ">Education</h2>
+        @for (item of cv.education; track $index) {
         <div class="mb-4">
-          <h3 class="text-xl font-medium">{{item.area}}</h3>
-          <p class="text-gray-600">{{item.institution}} | {{item.startDate}}</p>
+          <h3 class="text-sm font-extralight">{{item.area}}</h3>
+          <p class="text-gray-600 text-sm font-extralight">{{item.endDate}}  -  {{item.institution }}</p>
         </div>
-      }
-    </section>
+        }
+      </section>
 
-  <!-- Skills -->
-  <section>
-    <h2 class="text-2xl font-semibold mb-2 border-b border-gray-300 pb-2">Skills</h2>
-    @for (item of cv.skills; track $index) {
-      <div class="mb-4">
-        <h3 class="text-lg font-medium">{{item.name}} <i>({{item.level}})</i> </h3>
-        <p>{{ item.keywords.join(', ') }}</p>
+      <div #PROJECTS class="grid gap-2">
+        <h2 class="text-lg font-normal mb-2"> Projects </h2>
+        @for (item of cv.projects; track $index) {
+        <div class="grid mb-4">
+          <h3 class="text-sm font-normal">{{item.name}}</h3>
+          <span class="text-sm font-extralight">
+            <p class="font-extralight">{{item.description}}</p>
+            <p class="pt-2 text-[12px] font-extralight">Technologies: {{item.highlights[0]}}</p>
+          </span>
+        </div>
+        }
       </div>
-    }
-  </section>
-</div>
+
+    </article>
+
+
+    <article #RIGHT_SIDE class="grid gap-6">
+
+      <section #WORK_EXPERIENCE class="grid gap-2">
+        <h2 class="text-lg font-normal mb-2">Work experience </h2>
+        @for (item of cv.work; track $index) {
+        <div class="grid mb-4">
+          <h3 class="text-sm font-normal">{{item.name}}</h3>
+          <p class="text-gray-600 text-sm font-light">{{item.company}} | {{item.startDate}}</p>
+          <span class="text-sm font-extralight">
+            <p class="font-extralight">{{item.summary}}</p>
+            <p class="pt-2 text-[12px] font-extralight">Technologies: {{item.highlights[0]}}</p>
+          </span>
+        </div>
+        }
+      </section>
+
+
+      <section #SKILLS>
+        <h2 class="text-lg font-normal mb-2 ">Competencies</h2>
+        @for (item of cv.skills; track $index) {
+        <div class="mb-4">
+          <h3 class="text-sm font-extralight "> {{item.name}} </h3>
+          <p class="text-sm font-extralight ">{{ item.keywords.join(', ') }}</p>
+        </div>
+        }
+      </section>
+
+    </article>
+
+
+  </span>
+</main>
