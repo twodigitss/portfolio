@@ -2,7 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, signal, computed } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
-import { tablerDotsVertical, tablerCategory2, tablerSmartHome, tablerFileCv, tablerShoppingCart, tablerFileText } from '@ng-icons/tabler-icons';
+import {
+  tablerLayoutGrid,
+  tablerCategory2,
+  tablerSmartHome,
+  tablerFileCv,
+  tablerShoppingCart,
+  tablerFingerprint,
+  tablerBrandSafari,
+  tablerCompass,
+  tablerNews,
+  tablerPlus,
+  tablerMenu2,
+} from '@ng-icons/tabler-icons';
 
 @Component({
   selector: 'app-speed-dial',
@@ -21,15 +33,18 @@ export class SpeedDialComponent {
   endAngle = 90;
 
   readonly excludedIcons = {
-    tablerDotsVertical,
-    tablerCategory2
+    tablerLayoutGrid,
+    tablerCategory2,
+    tablerCompass,
+    tablerPlus,
+    tablerMenu2,
   }
 
   // estoy matcheando las rutas tal cual estan declaradas en el app.routes,
   // asi me evito la paja de tener que hacer un switch/case o algo asi...
-  readonly icons = new Map([
+  readonly icons = new Map([ //LIMITE DE 5!! porque luego se buggea, sobreponiendose
     ['home', tablerSmartHome],
-    ['cv', tablerFileCv],
+    ['cv', tablerNews],
     ['shop', tablerShoppingCart],
   ]);
 

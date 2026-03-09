@@ -20,7 +20,7 @@
       {
         "username": "twodigitss",
         "network": "GitHub",
-        "icon": "https://github.com/favicon.ico",
+        "icon": "https://images.icon-icons.com/1673/PNG/512/githuboutline_110889.png",
         "url": "https://github.com/twodigitss"
       }
     ]
@@ -31,7 +31,7 @@
       "startDate": "2021",
       "area": "Systems Engineering",
       "studyType": "Degree",
-      "institution": "Instituto Tecnologico Superior de Apatzingan"
+      "institution": "Tecnologico Nacional de Mexico - Campus Apatzingan"
     },{
       "endDate": "2021",
       "startDate": "2019",
@@ -83,7 +83,7 @@
     {
       "name": "Process Automations",
       "company":"Arcelormittal Mexico",
-      "summary": "Developed a web-based budget capture module integrated with an enterprise SQL Server database to standardize internal budgeting workflows, enabling structured data capture and version control for budget change requests and approvals.",
+      "summary": "Built a web-based budget capture module integrated with enterprise SQL Server Database to standardize and unify internal financial planning, enabling structured data capture and version control for budget change requests and approvals",
       "website": "https://mexico.arcelormittal.com/",
       "position": "Full Stack Developer",
       "startDate": "2025-08-15",
@@ -106,7 +106,7 @@
   "projects": [
     {
       "name": "Pageper – browser extension",
-      "description": "Developed a minimalist, distraction-free homepage, published on the official Firefox extension store. Implemented dynamic data loading using JSON files and state management with React. Automated build and packaging workflows using Shell scripts to optimize testing and deployment.",
+      "description": "Designed and deployed a minimalist, distraction-free homepage, published on the official Firefox extension store. Implemented dynamic data loading using JSON files and state management with React. Automated build and packaging workflows using Shell scripts to optimize testing and deployment.",
       "website": "https://addons.mozilla.org/es-MX/firefox/addon/pageper/",
       "startDate": "2025-03-08",
       "highlights": [

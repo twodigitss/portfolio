@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import cv from "../../../../assets/cv.json";
+import cv from "../../../../assets/dwayne.json";
 import { tablerMail } from "@ng-icons/tabler-icons";
 import { NgIcon } from "@ng-icons/core";
 import { CommonModule } from "@angular/common";
@@ -8,7 +8,7 @@ import { CommonModule } from "@angular/common";
   standalone: true,
   selector: 'cv',
   templateUrl: 'cv.page.html',
-  imports: [NgIcon, CommonModule]
+  imports: [CommonModule]
 })
 export class cvpage {
   readonly cv = cv;

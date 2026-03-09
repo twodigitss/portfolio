@@ -6,11 +6,11 @@ import { CommonModule } from "@angular/common";
 
 @Component({
   standalone: true,
-  selector: 'homepage',
-  templateUrl: 'home.page.html',
+  selector: 'shop-page',
+  templateUrl: 'shop.page.html',
   imports: [CommonModule ]
 })
-export class homepage {
+export class shoppage {
   constructor() { }
   readonly cv = cv;
   readonly icons = {

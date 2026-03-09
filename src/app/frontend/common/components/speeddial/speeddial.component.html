@@ -1,31 +1,32 @@
-<div class="fixed w-80 h-80 overflow-hidden">
+<div class="fixed w-80 h-80 overflow-hidden  print:hidden">
 
-  <button
+  <!--bg-[#fafafa]-->
+  <button id="thething"
     (click)="toggle()"
-    class="absolute top-10 left-10 w-10 h-auto aspect-square rounded-full bg-stone-100 text-black text-2xl flex items-center justify-center z-20"
+    class=" bg-[#f5f5f5] text-black absolute top-10 left-10 w-fit h-auto aspect-square p-2 rounded-full text-2xl flex items-center justify-center z-20 "
   >
     <ng-icon
-      [svg]="excludedIcons.tablerCategory2"
-      size="20" strokeWidth="2"
-      class="cursor-pointer"
+      [svg]="excludedIcons.tablerMenu2 "
+      size="18" strokeWidth="2"
+      class="cursor-pointer transition-transform duration-300 ease-in-out"
     />
+    <!--[style.transform]="open() ? 'rotate(-45deg)' : 'rotate(0deg)' "-->
   </button>
 
   <div class="absolute top-10 left-10 z-10">
     @for (item of icons.keys(); track $index; let i = $index) {
     <button
-      class="absolute w-10 h-auto aspect-square rounded-full bg-[#fafafa] flex items-center justify-center text-xl transition-all duration-300"
+      class="absolute w-fit h-fit aspect-square p-1 rounded-full flex items-center justify-center transition-all duration-300"
       [style.transform]="open() ? 'translate(' + positions()[i].x + 'px,' + positions()[i].y + 'px)' : 'translate(0,0)'"
       [style.opacity]="open() ? 1 : 0"
       [routerLink]="[ '/' + item ]"
+      (click)="toggle()"
     >
-      <abbr title="{{item}}">
         <ng-icon
           [svg]="icons.get(item)"
-          size="20" strokeWidth="2"
+          size="18" strokeWidth="2"
           class="cursor-pointer"
         />
-      </abbr>
     </button>
     }
   </div>
