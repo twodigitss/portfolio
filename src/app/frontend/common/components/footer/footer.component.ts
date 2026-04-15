@@ -2,7 +2,12 @@ import { Component, computed, inject, OnDestroy, OnInit, signal } from "@angular
 import { NavigationEnd, Router } from "@angular/router";
 import { NgIcon } from "@ng-icons/core";
 import cv from "../../../../../assets/dwayne.json";
-import { tablerBrandGithub, tablerBrandLinkedin, tablerCloudDownload, tablerHeartDollar, tablerMail } from "@ng-icons/tabler-icons";
+import { tablerBrandGithub,
+  tablerBrandLinkedin,
+  tablerCloudDownload,
+  tablerHeartDollar,
+  tablerMail
+} from "@ng-icons/tabler-icons";
 import { filter } from "rxjs/operators";
 
 @Component({
