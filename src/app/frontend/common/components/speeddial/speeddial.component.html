@@ -3,7 +3,7 @@
   <!--bg-[#fafafa]-->
   <button id="thething"
     (click)="toggle()"
-    class=" bg-[#f5f5f5] text-black absolute top-10 left-10 w-fit h-auto aspect-square p-2 rounded-full text-2xl flex items-center justify-center z-20 "
+    class=" bg-[#f5f5f5] border border-gray-200 text-black absolute top-10 left-10 w-fit h-auto aspect-square p-2 rounded-full text-2xl flex items-center justify-center z-20 "
   >
     <ng-icon
       [svg]="excludedIcons.tablerMenu2 "
@@ -17,7 +17,7 @@
     @for (item of icons.keys(); track $index; let i = $index) {
     <button
       class="absolute w-fit h-fit aspect-square p-1 rounded-full flex items-center justify-center transition-all duration-300"
-      [style.transform]="open() ? 'translate(' + positions()[i].x + 'px,' + positions()[i].y + 'px)' : 'translate(0,0)'"
+      [style.transform]="open() ? 'translate(' + positions()[i]?.x + 'px,' + positions()[i]?.y + 'px)' : 'translate(0,0)'"
       [style.opacity]="open() ? 1 : 0"
       [routerLink]="[ '/' + item ]"
       (click)="toggle()"

@@ -45,7 +45,7 @@ export class SpeedDialComponent {
   readonly icons = new Map([ //LIMITE DE 5!! porque luego se buggea, sobreponiendose
     ['home', tablerSmartHome],
     ['cv', tablerNews],
-    ['shop', tablerShoppingCart],
+    // ['shop', tablerShoppingCart],
   ]);
 
   positions = computed(() => {

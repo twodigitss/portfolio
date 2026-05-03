@@ -5,8 +5,9 @@
   },
   "basics": {
     "name": "Luis Enrique Torres Cervantes",
-    "label": "Jr Systems Engineer & Jr Web Developer",
-    "summary": "Junior Systems Engineer and full-stack developer focused on software development. Practical experience developing web modules integrated with enterprise SQL Server databases within corporate infrastructure, supporting internal business processes.",
+    "label": "Software Engineer / .NET / Angular / TypeScript",
+    "summary": "Full-Stack Engineer. Delivered two production modules solo at ArcelorMittal Mexico. integrating Angular 17, C# .NET Core and enterprise SQL Server in a heavy industry environment. Independently shipped a browser extension to Firefox Add-ons Store through its full SDLC and currently architecting a RESTful API in Golang to deepen backend expertise.",
+    "location": "Open to relocation - Remote ready",
     "website": "noname.com",
     "url": "http://localhost:5173",
     "email": "torrescervantesle@gmail.com",
