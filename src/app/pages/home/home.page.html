@@ -1,0 +1,30 @@
+<!--pagina 1-->
+<body class="flex flex-col min-h-screen scroll-smooth">
+
+  <div class="grow flex items-center justify-start mb-20">
+    <span class="grid gap-2 py-8  rounded-lg backdrop-blur-[2px]">
+      <h1 class="text-start tracking-wide text-3xl">
+        <span class="font-extralight">My name is </span> <span class="font-light">Enrique</span>.
+      </h1>
+
+      <p class="text-start font-extralight ">{{ (cv.cv | async)?.sections.education[0].degree}} in {{ (cv.cv | async)?.sections.education[0].area }}</p>
+
+      <span class="flex w-fit items-center border text-xs font-medium px-1.5 py-0.5 rounded"
+        [style.backgroundColor]="colors.theme.bg"
+        [style.borderColor]="colors.theme.border"
+        [style.color]="colors.theme.text"
+      >
+        <span class="h-1.5 w-1.5 rounded-full me-1" [style.backgroundColor]="colors.theme.text"></span>
+        <p class="text-start font-extralight ">{{ (cv.cv | async)?.location}}</p>
+      </span>
+
+      <p class="text-start font-extralight mt-6">About me:</p>
+      <p class="text-justify w-[70ch] text-sm font-extralight">{{ (cv.cv | async)?.sections.professional_summary }}</p>
+    </span>
+  </div>
+
+</body>
+
+<!--pagina 2-->
+
+<cv/>
