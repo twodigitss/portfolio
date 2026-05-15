@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
-@import "tailwindcss-primeui";
+@theme {
+  --transition-property-radius: border-radius;
+}
+
+@utility rounded-animated {
+  border-radius: 0px;
+  transition: all 250ms ease-in-out;
+}
 
 body{
   /*background-color: #f1f1f1;*/

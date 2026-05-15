@@ -4,14 +4,12 @@ import { CommonModule } from "@angular/common";
 import { NgIcon } from "@ng-icons/core";
 import { CV } from "../../common/services/cv.service";
 import { inject } from "@angular/core";
-import { CardComponent } from "../../common/components/card/card.component";
-import { simpleBun, simpleReact, simpleJavascript, simpleCss, simpleHtml5, simpleGnubash, simpleVite } from "@ng-icons/simple-icons";
 
 @Component({
   standalone: true,
-  selector: 'cv',
+  selector: 'cvpage',
   templateUrl: 'cv.page.html',
-  imports: [CommonModule, NgIcon, CardComponent]
+  imports: [CommonModule, NgIcon ]
 })
 export class cvpage {
   readonly cv = inject(CV);
@@ -21,15 +19,4 @@ export class cvpage {
     tablerMail
   }
 
-  readonly projectIcons = {
-    pageper: [
-      simpleJavascript,
-      simpleReact,
-      simpleBun,
-      simpleCss,
-      simpleHtml5,
-      simpleGnubash,
-      simpleVite,
-    ],
-  }
 }

@@ -1,8 +1,16 @@
 <app-particles/>
-<!--<app-speed-dial/>-->
+<!-- <router-outlet /> -->
 
-<main class="main px-8 max-h-screen sm:px-24 md:px-50 lg:px-72 ">
-  <router-outlet />
+
+<main class="flex my-24 ">
+
+  <aside class="grid  fixed top-24 left-0 h-auto">
+    <app-footer/>
+  </aside>
+
+  <div class=" mt-4 sm:ml-10 sm:px-24 md:px-20 lg:px-50 ">
+    <homepage/>
+    <cvpage/>
+    <projectspage/>
+  </div>
 </main>
-
-<app-footer/>

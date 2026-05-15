@@ -1,16 +1,49 @@
 <div class="backdrop-blur-[2px]">
-  <img [src]="imageUrl" class="rounded-lg">
 
   <div class="flex flex-col gap-2 py-4">
+    <!-- <img [src]="imageUrl" class=" max-h-50 w-auto rounded-lg"> -->
     <h2 class="font-normal text-lg">{{ title }}</h2>
     <h2 class="font-light text-md">{{ headline }}</h2>
     <p class="font-extralight text-sm">{{ description }}</p>
-    <h2 class="font-extralight text-sm">{{ linkUrl }}</h2>
 
-    <span class="flex gap-4 mt-4">
-      @for (icon of Technologies; track icon) {
-        <ng-icon [svg]="icon" size="20" strokeWidth="2" class="cursor-pointer" />
-      }
-    </span>
+    <p class="font-extralight text-sm">Technologies:</p>
+    <div class="flex justify-between items-center mt-4">
+      <span class="flex gap-4 ">
+        @for (item of Technologies; track item.name) {
+          <ng-icon [svg]="item.icon" size="20" strokeWidth="2" class="cursor-pointer"/>
+        }
+      </span>
+
+      <span class="flex gap-2">
+      <a
+        class="flex font-extralight text-sm border px-3 py-1 items-center justify-center gap-2
+        rounded-animated hover:rounded-lg"
+
+        rel="noopener"
+        target="_blank"
+        [style.backgroundColor]="colors.theme.bg"
+        [style.borderColor]="colors.theme.border"
+        [href]="demoUrl"
+        >
+        <!-- <p>Demo</p> -->
+        <ng-icon [svg]="icons.tablerExternalLink" size="16" strokeWidth="2" class="cursor-pointer" />
+      </a>
+
+      <a
+        class="flex font-extralight text-sm border px-3 py-1 items-center justify-center gap-2
+        rounded-animated hover:rounded-[8px]"
+
+        rel="noopener"
+        target="_blank"
+        [style.backgroundColor]="colors.theme.bg"
+        [style.borderColor]="colors.theme.border"
+        [href]="linkUrl"
+        >
+        <ng-icon [svg]="icons.tablerBrandGithub" size="16" strokeWidth="2" class="cursor-pointer" />
+      </a>
+      </span>
+    </div>
+
   </div>
+
 </div>

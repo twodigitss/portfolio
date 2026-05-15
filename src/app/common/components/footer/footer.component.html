@@ -1,0 +1,33 @@
+<footer
+    class="
+      flex flex-col h-full ml-16 px-2 py-8 gap-6 justify-center items-start
+      print:hidden backdrop-blur-[2px] border
+      rounded-animated hover:rounded-[12px]"
+      [style.backgroundColor]="colors.theme.bg"
+      [style.borderColor]="colors.theme.border"
+    >
+
+    @for (item of footerItems; track item.name) {
+      <!-- semi functional (except for the email) [href]="item.link" target="_blank" -->
+      <a
+        class="flex gap-2 items-center text-sm font-light hover:font-normal duration-100"
+        [href]="item.name === 'Email' ? 'mailto:' + ((cv.cv | async)?.email ?? '') : item.link"
+        [target]="item.name === 'Email' ? '_self' : '_blank'"
+        rel="noopener"
+        (mouseenter)="hoveredItem.set(item.name)"
+        (mouseleave)="hoveredItem.set(null)"
+        >
+        <ng-icon
+          [svg]="item.icon"
+          size="18"
+          [strokeWidth]="hoveredItem() === item.name ? 3 : 2"
+          [color]="colors.theme.text"
+          class="cursor-pointer transition-all duration-200 ease-in-out"
+        />
+        <!-- <p>{{item.name}}</p> -->
+      </a>
+    }
+
+    <!--p class="text-[#e0e0e0]">||</p-->
+
+</footer>

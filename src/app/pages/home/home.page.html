@@ -1,15 +1,16 @@
 <!--pagina 1-->
-<body class="flex flex-col min-h-screen scroll-smooth">
+<body class="flex flex-col mb-20 scroll-smooth">
 
-  <div class="grow flex items-center justify-start mb-20">
-    <span class="grid gap-2 py-8  rounded-lg backdrop-blur-[2px]">
-      <h1 class="text-start tracking-wide text-3xl">
+  <div class="grow flex items-center justify-start ">
+    <span class="grid gap-2 pb-8 rounded-lg backdrop-blur-[2px]">
+      <h1 class="text-start tracking-wide text-5xl">
         <span class="font-extralight">My name is </span> <span class="font-light">Enrique</span>.
       </h1>
 
       <p class="text-start font-extralight ">{{ (cv.cv | async)?.sections.education[0].degree}} in {{ (cv.cv | async)?.sections.education[0].area }}</p>
 
-      <span class="flex w-fit items-center border text-xs font-medium px-1.5 py-0.5 rounded"
+      <span class="flex w-fit items-center border text-xs font-medium px-1.5 py-0.5
+        rounded-animated hover:rounded-lg "
         [style.backgroundColor]="colors.theme.bg"
         [style.borderColor]="colors.theme.border"
         [style.color]="colors.theme.text"
@@ -25,6 +26,3 @@
 
 </body>
 
-<!--pagina 2-->
-
-<cv/>

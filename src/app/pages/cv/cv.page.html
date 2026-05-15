@@ -1,9 +1,9 @@
-<main class="flex min-h-screen items-start self-center font-['IBM Plex Sans'] text-justify backdrop-blur-[2px]">
+<main class="flex w-fit items-start self-center mb-20 font-['IBM Plex Sans'] text-justify backdrop-blur-[2px]">
   <span class="flex flex-col items-start gap-8">
 
     <!-- EXPERIENCE TIMELINE -->
     @if (cv.cv | async; as cvData) {
-    <h1 class="font-extralight text-3xl">Experience</h1>
+    <h1 class="font-extralight text-4xl">Experience</h1>
 
     <ol class="relative border-s border-[#d0d0d0] font-extralight text-sm">
 
@@ -33,19 +33,4 @@
   </span>
 </main>
 
-<h1 class="font-extralight text-3xl my-8">Projects</h1>
-<main class="grid grid-cols-2 gap-8 min-h-screen w-auto items-start self-center font-['IBM Plex Sans'] text-justify backdrop-blur-[2px]">
 
-  <project-card
-    class="w-full"
-    [title]="'Pageper'"
-    [headline]="'distraction-free startup page for browsers'"
-    [description]="'Minimalist distraction-free startup page for browsers. Helps users to stay focused by reducing cognitive noise. '"
-    [imageUrl]="'https://addons.mozilla.org/user-media/previews/full/321/321796.png?modified=1748234547'"
-    [linkUrl]="'https://github.com/twodigitss/pageper'"
-    [Technologies]="projectIcons.pageper"
-  />
-
-
-
-</main>

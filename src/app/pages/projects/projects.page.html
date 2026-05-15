@@ -1,0 +1,18 @@
+<main class="w-[800px]">
+  <h1 class="font-extralight text-4xl my-8">Projects</h1>
+  <div class="flex gap-8 w-auto items-start self-center font-['IBM Plex Sans'] text-justify backdrop-blur-[2px]">
+    @for(items of info; track $index){
+      <project-card
+        class="w-full"
+        [title]="items.title"
+        [headline]="items.headline"
+        [description]="items.description"
+        [imageUrl]="items.imageUrl"
+        [linkUrl]="items.linkUrl"
+        [demoUrl]="items.demoUrl"
+        [Technologies]="items.Technologies"
+      />
+    }
+  </div>
+
+</main>

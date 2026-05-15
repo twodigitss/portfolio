@@ -18,8 +18,15 @@ export class Colors {
       dots: "#E0F2FE",
       links: "#1E3A8A",
     },
+    grey: {
+      bg: "#fbf7f4",
+      border: "#e5ded2",
+      text: "#3e3e3e",
+      dots: "#e5ded2",
+      links: "#3e3e3e",
+    },
   }
 
-  readonly theme = this.bagdeColors.green
+  readonly theme = this.bagdeColors.grey
 
 }
