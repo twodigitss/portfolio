@@ -4,7 +4,7 @@ import Block from "../components/projBlock.astro";
 
 ---
 
-<div class="my-22 flex justify-between h-full w-full grid-cols-3 gap-8 bg-white ">
+<div class="flex flex-col w-full bg-white">
 
   <Block
     titleTop=""
@@ -12,37 +12,25 @@ import Block from "../components/projBlock.astro";
     image="/pageper_demo.png"
     imageAlt="img"
     day="01"
-    month="source code"
+    month="[ source code ]"
     firstName=""
     lastName=""
-    description="Minimalist distraction-free startup page for browsers."
+    description="Keyboard-centered Minimalist distraction-free startup page for browsers."
     venue={`React, tailwind, html`}
   />
 
-  <!-- <PosterCard -->
-  <!--   titleTop="" -->
-  <!--   titleBottom="Pageper" -->
-  <!--   image="/pageper_demo.png" -->
-  <!--   imageAlt="img" -->
-  <!--   day="01" -->
-  <!--   month="source code" -->
-  <!--   firstName="" -->
-  <!--   lastName="" -->
-  <!--   description="Minimalist distraction-free startup page for browsers." -->
-  <!--   venue={`React, tailwind, html`} -->
-  <!-- /> -->
-  <!---->
-  <!-- <PosterCard -->
-  <!--   titleTop="" -->
-  <!--   titleBottom="Apio" -->
-  <!--   image="/apio_demo.png" -->
-  <!--   imageAlt="img" -->
-  <!--   day="02" -->
-  <!--   month="source code" -->
-  <!--   firstName="" -->
-  <!--   lastName="" -->
-  <!--   description="Apio is a TUI tool that runs HTTP requests from plain HTTP files rather than using heavy GUI clients." -->
-  <!--   venue={`Golang, Bubbletea, LipGloss`} -->
-  <!-- /> -->
+  <Block
+    titleTop=""
+    titleBottom="Apio"
+    image="/apio_demo.png"
+    imageAlt="img"
+    day="02"
+    month="[ source code ]"
+    firstName=""
+    lastName=""
+    description="Apio is a TUI tool that runs HTTP requests from plain HTTP files rather than using heavy GUI clients."
+    venue={`Golang, Bubbletea, LipGloss`}
+    reversed
+  />
 
 </div>
