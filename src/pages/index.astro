@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layout/base.astro";
 import PosterCard from "../components/PosterCard.astro";
+import Projects from "./projects.astro";
 import Nav from "../components/Nav.astro";
 import Exp from "./exp.astro"
 ---
@@ -8,7 +9,7 @@ import Exp from "./exp.astro"
 
   <section class="flex gap-8">
 
-    <header class="flex flex-col bg-white justify-between h-screen">
+    <header class="flex flex-col bg-white justify-between h-screen border-b">
       <span>
         <p class="font-title text-[15rem] m-0 leading-none font-bold ">Developer</p>
         <p class="font-title text-[5rem] m-0 leading-none font-light ">Enrique Torres</p>
@@ -18,25 +19,19 @@ import Exp from "./exp.astro"
     </header>
 
     <!-- bg-gradient-to-b from-gray-950 to-transparent -->
-    <aside class="flex font-title pt-4 bg-[#171717] w-full justify-center"> 
+    <aside class="flex font-title pb-12 bg-[#171717] w-full items-end justify-center"> 
       <Nav/>
     </aside>
   </section>
 
+  <div class="mt-8 border-b"></div>
 
-  <div class="my-4">
-    <PosterCard
-      titleTop=""
-      titleBottom="twodigitss"
-      image="/card-portrait.jpg"
-      imageAlt="img"
-      day="01"
-      month="source code"
-      firstName="Pageper"
-      lastName="Startpage"
-      description="Minimalist distraction-free startup page for browsers."
-      venue={`React, tailwind, html`}
-    />
+  <div class="my-0 ml-16 border-l absolute h-screen"></div>
+
+  <p class="font-title text-right text-[15rem] m-0 pr-8 mt-15 leading-none font-bold ">Projects</p>
+  <div class="flex items-center justify-center px-[20rem] pt-20">
+    <Projects/>
   </div>
+
 
 </BaseLayout>

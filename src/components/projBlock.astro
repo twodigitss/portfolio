@@ -1,0 +1,39 @@
+---
+interface Props {
+  titleTop?: string;
+  titleBottom?: string;
+  image: string;
+  imageAlt?: string;
+  day: string;
+  month: string;
+  firstName: string;
+  lastName: string;
+  description?: string;
+  venue?: string;
+}
+
+const {
+titleTop = "Roz-", titleBottom="",
+  image, imageAlt = "",
+  day, month, 
+  firstName, lastName,
+  description = "", venue = "",
+} = Astro.props;
+---
+<article class="grid w-full">
+
+  <img src={image} alt={imageAlt} class="w-90 h-90 "/>
+
+  <p class="text-sm font-light text-neutral-900 m-0">{titleBottom}</p>
+  <p class="text-sm font-light text-neutral-900 m-0">{titleTop}</p>
+  <p class="text-sm font-light text-neutral-900 m-0">{day}</p>
+  <p class="text-sm font-light text-neutral-900 m-0">{month}</p>
+
+  <div class="grid">
+    <p class="text-sm font-light text-neutral-900 m-0">{firstName} <strong class="font-bold">{lastName}</strong></p>
+    {description && <p class="text-[10px] text-neutral-400 leading-snug m-0">{description}</p>}
+    {venue       && <p class="text-[10px] text-neutral-500 italic m-0">{venue}</p>}
+  </div>
+
+  
+</article>
