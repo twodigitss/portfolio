@@ -1,0 +1,49 @@
+---
+interface Props {
+  titleTop?: string;
+  titleBottom?: string;
+  image: string;
+  imageAlt?: string;
+  day: string;
+  month: string;
+  time: string;
+  firstName: string;
+  lastName: string;
+  description?: string;
+  venue?: string;
+}
+
+const {
+  titleTop = "Roz-", titleBottom = "ciągnęci",
+  image, imageAlt = "",
+  day, month, time,
+  firstName, lastName,
+  description = "", venue = "",
+} = Astro.props;
+---
+
+<article class="w-72 bg-white shadow-md font-sans">
+
+  <div class="grid overflow-hidden" style="grid-template-columns: 48px 1fr">
+    <div class="flex flex-col pt-4 pl-3 gap-1">
+      <span class="text-xs font-light tracking-widest text-neutral-800" style="writing-mode:vertical-rl;transform:rotate(180deg)">{titleTop}</span>
+      <span class="text-xl font-bold tracking-tight text-neutral-900" style="writing-mode:vertical-rl;transform:rotate(180deg)">{titleBottom}</span>
+    </div>
+    <img src={image} alt={imageAlt} class="w-full aspect-[3/4] object-cover" style="filter:saturate(0.88)" />
+  </div>
+
+  <footer class="grid gap-x-3 px-4 py-4 border-t border-neutral-200" style="grid-template-columns:56px 1fr">
+    <div class="flex flex-col text-neutral-900">
+      <span class="text-2xl font-bold leading-none">{day}</span>
+      <span class="text-xs text-neutral-400">—</span>
+      <span class="text-[11px] text-neutral-500">{month}</span>
+      <span class="text-[11px] font-medium mt-2">{time}</span>
+    </div>
+    <div class="flex flex-col gap-1">
+      <p class="text-sm font-light text-neutral-900 m-0">{firstName} <strong class="font-bold">{lastName}</strong></p>
+      {description && <p class="text-[10px] text-neutral-400 leading-snug m-0">{description}</p>}
+      {venue       && <p class="text-[10px] text-neutral-500 italic m-0">{venue}</p>}
+    </div>
+  </footer>
+
+</article>

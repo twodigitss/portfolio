@@ -1,17 +1,30 @@
 ---
-
+import BaseLayout from "../layout/base.astro";
+import PosterCard from "../components/PosterCard.astro";
 ---
+<BaseLayout>
+  <div class="">
+      <p class="font-title text-[15rem] m-0 leading-none font-bold">Portfolio</p>
+    <span class="flex justify-between">
+      <p class="font-title text-[3rem] m-0 leading-none font-light ">Enrique Torres</p>
+      <p class="font-title text-[1.5rem] m-0 leading-none font-light ">Full stack developer</p>
+    </span>
+  </div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <!-- <div class="my-4"> -->
+  <!---->
+  <!--   <PosterCard -->
+  <!--     titleTop="" -->
+  <!--     titleBottom="twodigitss" -->
+  <!--     image="/card-portrait.jpg" -->
+  <!--     imageAlt="img" -->
+  <!--     day="01" -->
+  <!--     month="source code" -->
+  <!--     firstName="Pageper" -->
+  <!--     lastName="Startpage" -->
+  <!--     description="Minimalist distraction-free startup page for browsers." -->
+  <!--     venue={`React, tailwind, html`} -->
+  <!--   /> -->
+  <!---->
+  <!-- </div> -->
+</BaseLayout>
