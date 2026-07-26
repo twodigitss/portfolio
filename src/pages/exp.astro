@@ -1,0 +1,35 @@
+---
+import { parse } from 'yaml';
+import BaseLayout from "../layout/base.astro";
+
+import {AboutMe} from "../data.ts";
+const experience = await AboutMe()
+---
+
+<BaseLayout>
+  <div class="grid">
+    <h1 class="font-extralight text-4xl">Experience</h1>
+    <ol class="font-extralight text-sm mt-4">
+      {experience.map((job: any) => (
+      <li class="mb-6">
+        <h3 class="flex items-center mb-1 text-lg font-light text-heading my-2">
+          {job.position} — {job.company}
+        </h3>
+
+        {job.summary && (
+        <p class="mb-2 text-body font-light">{job.summary}</p>
+        )}
+
+        {job.highlights?.length > 0 && (
+        <ul class="list-disc list-inside space-y-1">
+          {job.highlights.map((h: string) => (
+          <li class="mb-2 text-body w-[80ch]">{h}</li>
+          ))}
+        </ul>
+        )}
+      </li>
+      ))}
+    </ol>
+  </div>
+
+</BaseLayout>

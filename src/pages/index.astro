@@ -1,30 +1,42 @@
 ---
 import BaseLayout from "../layout/base.astro";
 import PosterCard from "../components/PosterCard.astro";
+import Nav from "../components/Nav.astro";
+import Exp from "./exp.astro"
 ---
 <BaseLayout>
-  <div class="">
-      <p class="font-title text-[15rem] m-0 leading-none font-bold">Portfolio</p>
-    <span class="flex justify-between">
-      <p class="font-title text-[3rem] m-0 leading-none font-light ">Enrique Torres</p>
-      <p class="font-title text-[1.5rem] m-0 leading-none font-light ">Full stack developer</p>
-    </span>
+
+  <section class="flex gap-8">
+
+    <header class="flex flex-col bg-white justify-between h-screen">
+      <span>
+        <p class="font-title text-[15rem] m-0 leading-none font-bold ">Developer</p>
+        <p class="font-title text-[5rem] m-0 leading-none font-light ">Enrique Torres</p>
+      </span>
+
+      <Exp/>
+    </header>
+
+    <!-- bg-gradient-to-b from-gray-950 to-transparent -->
+    <aside class="flex font-title pt-4 bg-[#171717] w-full justify-center"> 
+      <Nav/>
+    </aside>
+  </section>
+
+
+  <div class="my-4">
+    <PosterCard
+      titleTop=""
+      titleBottom="twodigitss"
+      image="/card-portrait.jpg"
+      imageAlt="img"
+      day="01"
+      month="source code"
+      firstName="Pageper"
+      lastName="Startpage"
+      description="Minimalist distraction-free startup page for browsers."
+      venue={`React, tailwind, html`}
+    />
   </div>
 
-  <!-- <div class="my-4"> -->
-  <!---->
-  <!--   <PosterCard -->
-  <!--     titleTop="" -->
-  <!--     titleBottom="twodigitss" -->
-  <!--     image="/card-portrait.jpg" -->
-  <!--     imageAlt="img" -->
-  <!--     day="01" -->
-  <!--     month="source code" -->
-  <!--     firstName="Pageper" -->
-  <!--     lastName="Startpage" -->
-  <!--     description="Minimalist distraction-free startup page for browsers." -->
-  <!--     venue={`React, tailwind, html`} -->
-  <!--   /> -->
-  <!---->
-  <!-- </div> -->
 </BaseLayout>
