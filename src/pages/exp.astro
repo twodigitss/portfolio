@@ -8,22 +8,22 @@ const experience = await AboutMe()
 
 <BaseLayout>
   <div class="grid mb-8">
-    <h1 class="font-extralight text-4xl">Experience</h1>
-    <ol class="font-extralight text-sm mt-4">
+    <h1 class="font-normal text-4xl">Experience</h1>
+    <ol class="font-normal text-sm mt-4">
       {experience.map((job: any) => (
       <li class="mb-8 mt-4">
-        <h3 class="flex items-center mb-1 text-lg font-light text-heading my-2">
+        <h3 class="flex items-center mb-1 text-xl font-bold text-heading my-2">
           {job.position} — {job.company}
         </h3>
 
         {job.summary && (
-        <p class="mb-2 text-body font-light">{job.summary}</p>
+        <p class="mb-2 font-normal text-lg">{job.summary}</p>
         )}
 
         {job.highlights?.length > 0 && (
         <ul class="list-disc list-inside space-y-1">
           {job.highlights.map((h: string) => (
-          <li class="mb-2 text-body w-[80ch]">{h}</li>
+          <li class="mb-2 text-lg w-[80ch]">{h}</li>
           ))}
         </ul>
         )}
