@@ -8,19 +8,31 @@ import Exp from "./exp.astro"
 ---
 <BaseLayout>
 
-  <section class="flex w-full h-full gap-8">
+  <!-- ─── HERO SECTION ─────────────────────────────────────────── -->
+  <section class="flex flex-col lg:flex-row w-full h-full gap-0 lg:gap-8">
 
-    <header class="flex flex-col bg-white justify-between h-screen border-b">
-      <span>
-        <p class="font-title text-[9rem] m-0 p-0 pt-4 self-center-safe leading-none font-bold anim-slide-left delay-100">Enrique Torres</p>
-        <p class="font-title text-[5rem] m-0 leading-none font-light anim-fade-up delay-300 text-cursor">Software Engineer</p>
+    <!-- Mobile top bar: avatar + nav horizontal -->
+    <div class="lg:hidden flex items-center justify-between px-4 py-4 bg-[#171717] text-white">
+      <img
+        class="w-14 h-14 rounded-full object-cover float-anim border-2 border-white/10"
+        src="https://avatars.githubusercontent.com/u/100657622?s=400&u=9249e7e45078d44984c9314ff1a673ada9f76cbd&v=4"
+      />
+      <Nav/>
+    </div>
+
+    <!-- Main text + experience -->
+    <header class="flex flex-col bg-white justify-between lg:h-screen border-b px-4 lg:px-0">
+      <span class=" lg:px-8" >
+        <p class="font-title text-[clamp(3rem,12vw,9rem)] m-0 p-0 pt-4 leading-none font-bold anim-slide-left delay-100">Enrique Torres</p>
+        <p class="font-title text-[clamp(1.8rem,6vw,5rem)] m-0 leading-none font-light anim-fade-up delay-300 text-cursor">Software Engineer</p>
       </span>
-      <div class="anim-fade-in delay-500">
+      <div class="anim-fade-in delay-500 lg:px-8">
         <Exp/>
       </div>
     </header>
 
-    <aside class="flex flex-col font-title pb-12 bg-[#171717] w-full max-w-100 justify-between ml-auto sticky top-0 h-screen">
+    <!-- Desktop sidebar: avatar + nav vertical -->
+    <aside class="hidden lg:flex flex-col font-title pb-12 bg-[#171717] w-full max-w-100 justify-between ml-auto sticky top-0 h-screen">
 
         <span class="TOP grid gap-4 block w-full anim-scale-in delay-200">
           <img class="aspect-square w-full object-cover float-anim" src="https://avatars.githubusercontent.com/u/100657622?s=400&u=9249e7e45078d44984c9314ff1a673ada9f76cbd&v=4"/>
@@ -33,15 +45,17 @@ import Exp from "./exp.astro"
     </aside>
   </section>
 
-  <div class="mt-16 w-full border-b reveal"></div>
+  <!-- ─── FEATURED PROJECTS ────────────────────────────────────── -->
+  <div class="mt-8 lg:mt-16 w-full border-b reveal"></div>
 
-  <p class="font-title text-right text-[5rem] m-0 pr-16 mt-15 text-center leading-none font-bold reveal">Featured</p>
-  <p class="font-title text-[3rem] m-0 leading-none pr-16 font-light text-right reveal delay-200">Projects</p>
-  <div class="flex justify-center px-[5rem] pt-40">
+  <p class="font-title text-[clamp(3rem,8vw,5rem)] m-0 px-4 lg:pr-16 mt-8 lg:mt-15 text-right leading-none font-bold reveal">Featured</p>
+  <p class="font-title text-[clamp(1.8rem,5vw,3rem)] m-0 leading-none px-4 lg:pr-16 font-light text-right reveal delay-200">Projects</p>
+
+  <div class="flex justify-center px-4 sm:px-8 lg:px-[5rem] pt-16 lg:pt-40">
     <Projects/>
   </div>
 
-  <div class="mb-44"></div>
+  <div class="mb-16 lg:mb-44"></div>
 
 </BaseLayout>
 

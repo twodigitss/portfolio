@@ -1,35 +1,29 @@
 ---
-import { parse } from 'yaml';
-import BaseLayout from "../layout/base.astro";
-
 import {AboutMe} from "../data.ts";
 const experience = await AboutMe()
 ---
 
-<BaseLayout>
-  <div class="grid mb-8">
-    <h1 class="font-normal text-4xl">Experience</h1>
-    <ol class="font-normal text-sm mt-4">
-      {experience.map((job: any) => (
-      <li class="mb-8 mt-4">
-        <h3 class="flex items-center mb-1 text-xl font-bold text-heading my-2">
-          {job.position} — {job.company}
-        </h3>
+<div class="grid mb-8 pb-6 px-4 lg:px-0">
+  <h1 class="font-normal text-2xl lg:text-4xl">Experience</h1>
+  <ol class="font-normal text-sm mt-4">
+    {experience.map((job: any) => (
+    <li class="mb-6 mt-4">
+      <h3 class="flex flex-wrap items-center mb-1 text-base lg:text-xl font-bold text-heading my-2">
+        {job.position} — {job.company}
+      </h3>
 
-        {job.summary && (
-        <p class="mb-2 font-normal text-lg">{job.summary}</p>
-        )}
+      {job.summary && (
+      <p class="mb-2 font-normal text-sm lg:text-lg">{job.summary}</p>
+      )}
 
-        {job.highlights?.length > 0 && (
-        <ul class="list-disc list-inside space-y-1">
-          {job.highlights.map((h: string) => (
-          <li class="mb-2 text-lg w-[80ch]">{h}</li>
-          ))}
-        </ul>
-        )}
-      </li>
-      ))}
-    </ol>
-  </div>
-
-</BaseLayout>
+      {job.highlights?.length > 0 && (
+      <ul class="list-disc list-inside space-y-1">
+        {job.highlights.map((h: string) => (
+        <li class="mb-2 text-sm lg:text-lg max-w-prose lg:max-w-[80ch]">{h}</li>
+        ))}
+      </ul>
+      )}
+    </li>
+    ))}
+  </ol>
+</div>
