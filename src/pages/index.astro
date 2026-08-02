@@ -1,9 +1,8 @@
 ---
-import BaseLayout from "../layout/base.astro";
-import PosterCard from "../components/PosterCard.astro";
+import BaseLayout from "./layout/base.astro";
 import Projects from "./projects.astro";
-import Nav from "../components/Nav.astro";
-import Exp from "./exp.astro"
+import Nav from "./layout/components/nav.astro";
+import Exp from "./experience.astro"
 
 ---
 <BaseLayout>
@@ -34,7 +33,7 @@ import Exp from "./exp.astro"
     <!-- Desktop sidebar: avatar + nav vertical -->
     <aside class="hidden lg:flex flex-col font-title pb-12 bg-[#171717] w-full max-w-100 justify-between ml-auto sticky top-0 h-screen">
 
-        <span class="TOP grid gap-4 block w-full anim-scale-in delay-200">
+        <span class="TOP gap-4 block w-full anim-scale-in delay-200">
           <img class="aspect-square w-full object-cover float-anim" src="https://avatars.githubusercontent.com/u/100657622?s=400&u=9249e7e45078d44984c9314ff1a673ada9f76cbd&v=4"/>
         </span>
 
@@ -51,7 +50,7 @@ import Exp from "./exp.astro"
   <p class="font-title text-[clamp(3rem,8vw,5rem)] m-0 px-4 lg:pr-16 mt-8 lg:mt-15 text-right leading-none font-bold reveal">Featured</p>
   <p class="font-title text-[clamp(1.8rem,5vw,3rem)] m-0 leading-none px-4 lg:pr-16 font-light text-right reveal delay-200">Projects</p>
 
-  <div class="flex justify-center px-4 sm:px-8 lg:px-[5rem] pt-16 lg:pt-40">
+  <div class="flex justify-center px-4 sm:px-8 lg:px-20 pt-16 lg:pt-40">
     <Projects/>
   </div>
 

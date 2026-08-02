@@ -17,13 +17,13 @@ const {
 } = Astro.props;
 ---
 
-<article class={`group flex flex-col sm:flex-row w-full min-h-fit sm:min-h-[360px] border border-neutral-200 bg-white overflow-hidden transition-colors duration-300 hover:bg-neutral-950 hover:text-white reveal ${reversed ? "sm:flex-row-reverse reveal-left" : "reveal-right"}`}>
+<article class={`group flex flex-col sm:flex-row w-full min-h-fit sm:min-h-90 border border-neutral-200 bg-white overflow-hidden transition-colors duration-300 hover:bg-neutral-950 hover:text-white reveal ${reversed ? "sm:flex-row-reverse reveal-left" : "reveal-right"}`}>
 
   <!-- image — mobile: full width on top; desktop: square on side -->
-  <div class="w-full sm:w-auto sm:flex-none sm:aspect-square overflow-hidden card-img-wrap order-first sm:order-none">
+  <div class="w-full sm:w-auto sm:flex-none sm:aspect-square overflow-hidden card-img-wrap order-first sm:order-0">
     <img
       src={image}
-      class="w-full h-56 sm:w-100 sm:h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04] group-hover:grayscale-[30%]"
+      class="w-full h-56 sm:w-100 sm:h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04] group-hover:grayscale-30"
     />
   </div>
 
