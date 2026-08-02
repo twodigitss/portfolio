@@ -4,6 +4,18 @@
   --font-title: 'Switzer', sans-serif;
 }
 
+.no-scrollbar {
+    /* Firefox */
+    scrollbar-width: none; 
+    
+    /* Internet Explorer and Legacy Edge */
+    -ms-overflow-style: none; 
+}
+
+/* Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
 /* ─── Keyframes ─────────────────────────────────────────────── */
 
 @keyframes fadeUp {
