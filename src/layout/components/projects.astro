@@ -1,28 +1,26 @@
 ---
 import Block from "./card.astro";
 import apioImg from "../../assets/apio_demo.png";
-import pperImg from "../../assets/apio_demo.png";
+import pperImg from "../../assets/pageper_demo.png";
 ---
 
 <div class="flex flex-col w-full bg-white">
+    <Block
+        title="Apio"
+        image={apioImg.src}
+        consecutive="01"
+        url="https://github.com/twodigitss/apio"
+        description="Apio is a Terminal UI tool that runs requests from your local HTTP / REST files."
+        technologies={`Go, Bubbletea, Lipgloss`}
+    />
 
-  <Block
-    title="Apio"
-    image={apioImg.src}
-    consecutive="01"
-    url="https://github.com/twodigitss/apio"
-    description="Apio is a TUI tool that runs HTTP requests from plain HTTP files rather than using heavy GUI clients."
-    technologies={`Golang, Bubbletea, LipGloss`}
-    reversed
-  />
-
-  <Block
-    title="Pageper"
-    image={pperImg.src}
-    consecutive="02"
-    url="https://github.com/twodigitss/Pageper"
-    description="Keyboard-centered Minimalist distraction-free startup page for browsers."
-    technologies={`React, tailwind, html`}
-  />
-
+    <Block
+        title="Pageper"
+        image={pperImg.src}
+        consecutive="02"
+        url="https://github.com/twodigitss/Pageper"
+        description="Keyboard centered, minimalist and distraction free startup page for browsers."
+        technologies={`React.js, Typescript, TailwindCSS, HTML`}
+        reversed
+    />
 </div>
