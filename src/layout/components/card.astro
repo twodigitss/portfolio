@@ -1,49 +1,80 @@
 ---
 interface Props {
-  title?: string;
-  image: string;
-  consecutive: string;
-  url: string;
-  description?: string;
-  technologies?: string;
-  reversed?: boolean;
+    title?: string;
+    image: string;
+    consecutive: string;
+    url: string;
+    description?: string;
+    technologies?: string;
+    reversed?: boolean;
 }
 
 const {
-  title = "", image,
-  consecutive, url,
-  description = "", technologies = "",
-  reversed = false,
+    title = "",
+    image,
+    consecutive,
+    url,
+    description = "",
+    technologies = "",
+    reversed = false,
 } = Astro.props;
 ---
 
-<article class={`group flex flex-col sm:flex-row w-full min-h-fit sm:min-h-90 border border-neutral-200 bg-white overflow-hidden transition-colors duration-300 reveal ${reversed ? "sm:flex-row-reverse reveal-left" : "reveal-right"}`}>
-
-  <!-- image — mobile: full width on top; desktop: square on side -->
-  <div class="w-full sm:w-auto sm:flex-none sm:aspect-square overflow-hidden card-img-wrap order-first sm:order-0">
-    <img
-      src={image}
-      class="w-full h-56 sm:w-100 sm:h-full object-cover object-center transition-transform duration-500"
-    />
-  </div>
-
-  <!-- text half -->
-  <div class="flex-1 flex flex-col p-6 sm:p-10 border-neutral-200 group-hover:border-neutral-800">
-    <div class="flex justify-between mb-auto">
-      <span class="text-base tracking-widest uppercase opacity-35">{consecutive}</span>
-      <a href={url} target="blank" class="text-sm tracking-widest uppercase opacity-35 transition-opacity duration-200 hover:opacity-80">[ source code ]</a>
+<article
+    class={`group flex flex-col sm:flex-row w-full min-h-fit sm:min-h-90 border border-neutral-200 bg-white overflow-hidden transition-colors duration-300 reveal ${reversed ? "sm:flex-row-reverse reveal-left" : "reveal-right"}`}
+>
+    <!-- image — mobile: full width on top; desktop: square on side -->
+    <div
+        class="w-full sm:w-auto sm:flex-none sm:aspect-square overflow-hidden card-img-wrap order-first sm:order-0"
+    >
+        <img
+            src={image}
+            class="w-full h-56 sm:w-100 sm:h-full object-cover object-center transition-transform duration-500"
+        />
     </div>
 
-    <h2 class="font-title text-[clamp(2.2rem,6vw,4rem)] font-normal leading-[0.9] uppercase tracking-tight my-4 transition-transform duration-500 group-hover:translate-x-1">
-      <p class="font-light">{title}</p>
-    </h2>
+    <!-- text half -->
+    <div
+        class="flex-1 flex flex-col p-6 sm:p-10 border-neutral-200 group-hover:border-neutral-800"
+    >
+        <div class="flex justify-between mb-auto">
+            <span class="text-base tracking-widest uppercase opacity-35"
+                >{consecutive}</span
+            >
+            <a
+                href={url}
+                target="blank"
+                class="text-sm tracking-widest uppercase opacity-35 transition-opacity duration-200 hover:opacity-80"
+                >[ source code ]</a
+            >
+        </div>
 
-    {description && <p class="text-base sm:text-lg leading-relaxed opacity-55 mb-2 max-w-[36ch] transition-opacity duration-300 group-hover:opacity-80">{description}</p>}
-    {technologies      && <p class="text-sm sm:text-md tracking-wider uppercase opacity-30">{technologies}</p>}
+        <h2
+            class="font-title text-[clamp(2.2rem,6vw,3rem)] font-normal leading-[0.9] uppercase tracking-tight my-4 transition-transform duration-500 group-hover:translate-x-1"
+        >
+            <p class="font-light">{title}</p>
+        </h2>
 
-    <div class="mt-auto pt-6 sm:pt-8">
-      <span class="text-xl opacity-35 inline-block transition-transform duration-400 group-hover:translate-y-1 group-hover:opacity-70">↓</span>
+        {
+            description && (
+                <p class="text-base sm:text-lg leading-relaxed opacity-55 mb-2 max-w-[36ch] transition-opacity duration-300 group-hover:opacity-80">
+                    {description}
+                </p>
+            )
+        }
+        {
+            technologies && (
+                <p class="text-sm sm:text-md tracking-wider uppercase opacity-30">
+                    {technologies}
+                </p>
+            )
+        }
+
+        <div class="mt-auto pt-6 sm:pt-8">
+            <span
+                class="text-xl opacity-35 inline-block transition-transform duration-400 group-hover:translate-y-1 group-hover:opacity-70"
+                >↓</span
+            >
+        </div>
     </div>
-  </div>
-
 </article>
