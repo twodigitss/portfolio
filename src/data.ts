@@ -1,6 +1,8 @@
 import { parse } from "yaml";
 import * as types from "./types";
 
+//================== FROM GITHUB GISTS =========================
+
 let cachedCV: types.CVData | null = null;
 
 async function fetchCV(): Promise<types.CVData> {
@@ -23,7 +25,4 @@ export async function CV(): Promise<types.CVSections> {
   return cv.sections;
 }
 
-export async function Summary(): Promise<string[] | undefined> {
-  const cv = await fetchCV();
-  return cv.sections.professional_summary;
-}
+//================== PROJECTS =========================

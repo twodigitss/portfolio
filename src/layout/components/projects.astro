@@ -4,36 +4,37 @@ import apioImg from "../../assets/apio_demo.png";
 import pperImg from "../../assets/pageper_demo.png";
 ---
 
-<div class="flex flex-col w-full bg-white">
-    <p
-        class="font-title text-[clamp(3rem,5vw,6rem)] m-0 px-4 lg:pr-16 mt-8 lg:mt-15 text-left ml-12 leading-none font-bold reveal"
-    >
-        Featured
-    </p>
-    <p
-        class="font-title text-[clamp(1.8rem,4vw,5rem)] m-0 leading-none px-4 lg:pr-16 font-light ml-12 text-left reveal delay-200"
-    >
-        Projects
-    </p>
+<div class="flex flex-col w-full ml-6 ">
+    <section class="flex w-full px-16 items-center">
+        <span class="grid justify-between w-full">
+            <p class=" text-[6rem] m-0 p-0 text-left leading-none font-bold" >
+                Featured
+            </p>
+            <p class=" text-[5rem] m-0 p-0 leading-none font-light text-left" >
+                Projects
+            </p>
+        </span>
+        <span class="font-sans-flex font-bold text-[9rem] m-0 p-0 text-left leading-none border-l-[0.1rem] pl-12"> 02 </span>
+    </section>
 
-    <span class="grid px-4 sm:px-8 lg:px-20 pt-16 lg:pt-30">
+    <span class="grid px-20 pt-30">
         <Block
-            title="Apio"
-            image={apioImg.src}
-            consecutive="01"
-            url="https://github.com/twodigitss/apio"
-            description="Apio is a Terminal UI tool that runs requests from your local HTTP / REST files."
-            technologies={`Go, Bubbletea, Lipgloss`}
+        title="Apio"
+        image={apioImg.src}
+        consecutive="01"
+        url="https://github.com/twodigitss/apio"
+        description="Apio is a Terminal UI tool that runs requests from your local HTTP / REST files."
+        technologies={`Go, Bubbletea, Lipgloss`}
         />
 
         <Block
-            title="Pageper"
-            image={pperImg.src}
-            consecutive="02"
-            url="https://github.com/twodigitss/Pageper"
-            description="Keyboard centered, minimalist and distraction free bookmark startup page for browsers."
-            technologies={`React.js, Typescript, TailwindCSS, HTML`}
-            reversed
+        title="Pageper"
+        image={pperImg.src}
+        consecutive="02"
+        url="https://github.com/twodigitss/Pageper"
+        description="Keyboard centered, minimalist and distraction free bookmark startup page for browsers."
+        technologies={`React.js, Typescript, TailwindCSS, HTML`}
+        reversed
         />
     </span>
 </div>
