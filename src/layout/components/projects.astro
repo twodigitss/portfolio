@@ -2,39 +2,60 @@
 import Block from "./card.astro";
 import apioImg from "../../assets/apio_demo.png";
 import pperImg from "../../assets/pageper_demo.png";
+
+const projects = [
+    {
+        title: "Apio",
+        image: apioImg.src,
+        url: "https://github.com/twodigitss/apio",
+        description: "Apio is a Terminal UI tool that runs requests from your local HTTP / REST files.",
+        technologies: `Go, Bubbletea, Lipgloss`,
+        reversed: false,
+    },
+    {
+        title: "Pageper",
+        image: pperImg.src,
+        url: "https://github.com/twodigitss/Pageper",
+        description: "Keyboard centered, minimalist and distraction free bookmark startup page for browsers.",
+        technologies: `React.js, Typescript, TailwindCSS, HTML`,
+        reversed: true,
+    },
+];
+
 ---
 
-<div class="flex flex-col w-full ml-6 ">
-    <section class="flex w-full px-16 items-center">
-        <span class="grid justify-between w-full">
-            <p class=" text-[6rem] m-0 p-0 text-left leading-none font-bold" >
+<div class="flex flex-col w-full px-16 ">
+    <section class="flex w-full items-center ">
+
+        <span class="grid items-center w-full">
+            <p class=" font-sans-flex text-[6rem] m-0 p-0 leading-none font-bold" >
                 Featured
             </p>
-            <p class=" text-[5rem] m-0 p-0 leading-none font-light text-left" >
+            <p class=" font-switzer text-[4rem] m-0 p-0 leading-none font-light" >
                 Projects
             </p>
         </span>
-        <span class="font-sans-flex font-bold text-[9rem] m-0 p-0 text-left leading-none border-l-[0.1rem] pl-12"> 02 </span>
+
+        <div class="w-full font-normal text-[1.3rem] pb-1 font-sans-flex border-b-[0.1rem]">
+            Personal tools built outside of work
+        </div>
+
+        <span class="font-sans-flex font-bold text-[9rem] m-0 p-0 text-left leading-none border-l-[0.2rem] pl-12"> {String(projects.length).padStart(2, '0')} </span>
     </section>
 
-    <span class="grid px-20 pt-30">
-        <Block
-        title="Apio"
-        image={apioImg.src}
-        consecutive="01"
-        url="https://github.com/twodigitss/apio"
-        description="Apio is a Terminal UI tool that runs requests from your local HTTP / REST files."
-        technologies={`Go, Bubbletea, Lipgloss`}
-        />
+    <span class="grid pt-20">
 
-        <Block
-        title="Pageper"
-        image={pperImg.src}
-        consecutive="02"
-        url="https://github.com/twodigitss/Pageper"
-        description="Keyboard centered, minimalist and distraction free bookmark startup page for browsers."
-        technologies={`React.js, Typescript, TailwindCSS, HTML`}
-        reversed
-        />
+        {projects.map((project, i) => (
+            <Block
+                title={project.title}
+                consecutive={String(i + 1).padStart(2, '0')}
+                image={project.image}
+                url={project.url}
+                description={project.description}
+                technologies={project.technologies}
+                reversed={project.reversed}
+            />
+        ))}
+
     </span>
 </div>

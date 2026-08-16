@@ -10,32 +10,23 @@ const colsByCount: Record<number, string> = {
     6: "md:grid-cols-6",
 };
 
-// Hardcoded data — swap for real content later
-const experience = {
+const projects = [
+  {
     company: "Empresa Confidencial",
     role: "Software Engineer",
     period: "2025 — Present",
-};
-
-const projects = [
-    {
-        number: "",
-        name: "",
-        description: "",
-        stack: "",
-    },
-    {
-        number: "",
-        name: "",
-        description: "",
-        stack: "",
-    },
-    {
-        number: "",
-        name: "",
-        description: "",
-        stack: "",
-    },
+    name: "Occupational Health Screening Module",
+    description: "Tracking screen for occupational health checkups, accessed via a QR code. Patients often don't know how many consulting rooms they need to visit or which one is calling them next until they hear their number. This screen shows their full route: which room is currently calling them, which they've completed, and confirms when the entire checkup is done.",
+    stack: "Angular, C#, SQL Server",
+  },
+  {
+    company: "Empresa Confidencial",
+    role: "Software Engineer",
+    period: "2025 — Present",
+    name: "3D Map Visualization Module",
+    description: "Developed a 3D visualization module using Three.js and Angular 17, providing a clearer spatial orientation for on-site personnel. unified interactive interface used in production.",
+    stack: "Angular, C#, SQL Server",
+  }
 ];
 
 // Falls back to a sane grid if someone adds more than 6 (2 cols on mobile, 3 on desktop)
@@ -43,59 +34,46 @@ const gridColsClass = colsByCount[projects.length] ?? "md:grid-cols-3";
 ---
 
 <!-- Section header — EXPERIENCE compact, subordinate to nothing below it -->
-<section
-    class="bg-black text-white px-6 md:px-16 pt-16 md:pt-20 pb-10 md:pb-12 border-b border-neutral-800"
->
-    <div
-        class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 md:gap-16 items-start"
-    >
-        <p
-            class="text-sm md:text-base text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 md:pt-0 md:border-t-0 md:border-r md:border-neutral-800 md:pr-8"
-        >
-            {experience.company} — {experience.role}, {experience.period}.
-            Cuatro proyectos desarrollados dentro del mismo equipo, cubriendo
-            formularios transaccionales, visualización 3D, dashboards de
-            seguimiento y digitalización de procesos internos.
+<section class="bg-[#1B1B1B] text-white px-6 md:px-16 pt-16 md:pt-20 pb-10 md:pb-12 border-b border-neutral-800" >
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 md:gap-16 items-center" >
+        <p class="text-sm md:text-base text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 md:pt-0 md:border-t-0 md:border-r md:border-neutral-800 md:pr-8 font-sans-flex" >
+            Currently working at arcelormittal mexico as a software developer using Angular, C# .NET and SQL Server.
         </p>
-        <h1
-            class="text-5xl text-right md:text-7xl font-bold leading-none tracking-tight"
-        >
+        <h1 class=" font-switzer text-[#F1F0EA] text-5xl text-right md:text-7xl font-bold leading-none tracking-tight" >
             Experience
         </h1>
     </div>
+
+    <section class=" text-white w-full h-full py-10 md:py-14">
+        <div class="grid h-auto grid-cols-1 md:grid-cols-[280px_1fr] gap-8 md:gap-10">
+            <!-- Plain blank rectangle standing in for imagery -->
+            <div class="w-full h-full bg-[#F1F0EA] border self-stretch" > </div>
+
+            <!-- 4 equal-weight columns, no single project dominates -->
+            <div class={`grid grid-cols-2 ${gridColsClass} gap-6 md:gap-8`}>
+                {
+                    projects.map((project, i) => (
+                        <div class="border-t border-[#F1F0EA] pt-4">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] tracking-widest text-neutral-500 uppercase">
+                                    {project.stack.split(",")[0]}
+                                </span>
+                                <span class="w-7 h-7 rounded-full border border-[#F1F0EA]  flex items-center justify-center text-xs font-medium shrink-0">
+                                    {i+1}
+                                </span>
+                            </div>
+                            <h3 class="text-base font-switzer font-bold leading-tight mb-3">
+                                {project.name}
+                            </h3>
+                            <p class="text-base text-neutral-400 leading-relaxed font-sans-flex">
+                                {project.description}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
 </section>
 
 <!-- Body: placeholder panel (left) + 4 numbered columns (right) -->
-<section class="bg-black text-white px-6 md:px-16 py-10 md:py-14">
-    <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 md:gap-10">
-        <!-- Plain blank rectangle standing in for imagery -->
-        <div
-            class="w-full h-64 md:h-full min-h-80 bg-white border border-white"
-        >
-        </div>
-
-        <!-- 4 equal-weight columns, no single project dominates -->
-        <div class={`grid grid-cols-2 ${gridColsClass} gap-6 md:gap-8`}>
-            {
-                projects.map((project) => (
-                    <div class="border-t border-white pt-4">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-[10px] tracking-widest text-neutral-500 uppercase">
-                                {project.stack.split(",")[0]}
-                            </span>
-                            <span class="w-7 h-7 rounded-full border border-white flex items-center justify-center text-xs font-medium shrink-0">
-                                {project.number.replace("0", "")}
-                            </span>
-                        </div>
-                        <h3 class="text-sm font-bold leading-tight mb-3">
-                            {project.name}
-                        </h3>
-                        <p class="text-xs text-neutral-400 leading-relaxed">
-                            {project.description}
-                        </p>
-                    </div>
-                ))
-            }
-        </div>
-    </div>
-</section>

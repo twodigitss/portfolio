@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layout/base.astro";
 import Projects from "../layout/components/projects.astro";
-import Nav from "../layout/components/nav.astro";
+import Socials from "../layout/components/socials.astro";
 import Exp from "../layout/components/experience.astro";
 
 import { CV } from "../data.ts";
@@ -13,16 +13,17 @@ const cv = await CV();
     <section class="flex w-full h-full ">
 
         <!-- Desktop sidebar: avatar + nav vertical -->
-        <aside class="flex flex-col gap-30 font-title p-2  bg-[#1B1B1B] w-full max-w-100 justify-between  " >
+        <aside class="flex flex-col font-title p-2  bg-[#1B1B1B] w-full max-w-100 justify-between " >
             <span class="TOP gap-4 block w-full ">
+                <!-- border-[#F1F0EA] border-2 -->
                 <img
-                class="aspect-square w-full object-cover "
+                class="aspect-square w-full object-cover  "
                 src="https://avatars.githubusercontent.com/u/100657622?v=4"
                 />
             </span>
 
-            <div class="flex flex-col items-center pb-4">
-                <Nav />
+            <div class="flex flex-col items-center py-4">
+                <Socials />
             </div>
         </aside>
 
@@ -42,7 +43,7 @@ const cv = await CV();
                   <div class="grid mb-2 gap-4 pb-6 px-4 lg:px-0 font-sans-flex">
                       <h1 class="font-normal text-3xl lg:text-4xl">About Me :</h1>
                       {cv.professional_summary.map((p: string) => (
-                      <p class=" w-[70ch]  text-sm lg:text-xl">{p}</p>
+                      <p class=" w-[70ch] font-normal text-sm lg:text-[1.2rem]">{p}</p>
                       ))}
                   </div>
                   )
@@ -55,11 +56,11 @@ const cv = await CV();
     <!-- ───  EXPERIENCE ────────────────────────────────────── -->
 
     <!-- <div class="mt-16 w-full border-b"></div> -->
+    <div class="my-12 w-full border-b-[0.1rem]"></div>
 
-    <!-- <Exp /> -->
+    <Exp />
 
-    <div class="mt-12 w-full border-b-[0.1rem]"></div>
-    <div class="mt-16 w-full"></div>
+    <div class="my-12 w-full border-b-[0.1rem]"></div>
 
     <!-- ─── FEATURED PROJECTS ────────────────────────────────────── -->
 
