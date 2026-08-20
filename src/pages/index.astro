@@ -10,40 +10,38 @@ const cv = await CV();
 
 <BaseLayout>
     <!-- ─── ME SECTION ─────────────────────────────────────────── -->
-    <section class="flex w-full h-full ">
+    <section class="flex flex-col lg:flex-row w-full h-full">
 
-        <!-- Desktop sidebar: avatar + nav vertical -->
-        <aside class="flex flex-col font-title p-2  bg-[#1B1B1B] w-full max-w-100 justify-between " >
-            <span class="TOP gap-4 block w-full ">
-                <!-- border-[#F1F0EA] border-2 -->
+        <!-- Avatar + socials sidebar -->
+        <aside class="flex flex-col font-title p-2 bg-[#1B1B1B] w-full lg:max-w-100 justify-start">
+            <span class="block w-full">
                 <img
-                class="aspect-square w-full object-cover  "
+                class="w-full object-cover object-top max-h-[60vw] lg:max-h-none aspect-square"
                 src="https://avatars.githubusercontent.com/u/100657622?v=4"
                 />
             </span>
 
-            <div class="flex flex-col items-center py-4">
+            <div class="flex flex-col py-4">
                 <Socials />
             </div>
         </aside>
 
-
         <!-- Main text + experience -->
-        <header class="flex flex-col justify-between border-b w-full" >
-            <span class="pl-8">
-                <p class="font-switzer text-[10rem] m-0 p-0 pt-4 tracking-tight leading-none font-bold" >
+        <header class="flex flex-col justify-between border-b w-full md:gap-8 sm:gap-8 ">
+            <span class="grid pl-4 gap-5 lg:pl-8">
+                <p class="font-switzer text-[clamp(2.5rem,8vw,10rem)] m-0 p-0 pt-4 tracking-tight leading-none font-bold">
                     Enrique Torres
                 </p>
-                <p class="font-sans-flex text-7xl text-[#2e2e2e] m-0 leading-none font-light text-cursor" >
+                <p class="font-sans-flex text-[clamp(1.5rem,4vw,4.5rem)] text-[#2e2e2e] m-0 leading-none font-light text-cursor">
                     Software Engineer
                 </p>
             </span>
-            <div class="px-8">
+            <div class="px-4 lg:px-8">
                 { cv.professional_summary && (
-                  <div class="grid mb-2 gap-4 pb-6 px-4 lg:px-0 font-sans-flex">
-                      <h1 class="font-normal text-3xl lg:text-4xl">About Me :</h1>
+                  <div class="grid mb-2 gap-1 pb-6 font-sans-flex"> 
+                      <h1 class="font-normal text-[clamp(1.2rem,4vw,2.25rem)]">About Me :</h1>
                       {cv.professional_summary.map((p: string) => (
-                      <p class=" w-[70ch] font-normal text-sm lg:text-[1.2rem]">{p}</p>
+                      <p class="w-full max-w-[70ch] font-normal text-[clamp(0.75rem,2vw,1.2rem)]">{p}</p>
                       ))}
                   </div>
                   )
@@ -66,5 +64,5 @@ const cv = await CV();
 
     <Projects />
 
-    <!-- <div class="mb-44"></div> -->
+    <div class="mb-22"></div>
 </BaseLayout>

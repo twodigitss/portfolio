@@ -1,0 +1,44 @@
+summary: >- 
+    Full-Stack Engineer currently working with Angular 17, C# .NET Core and SQL Server in a heavy industry setting. 
+    Outside of work, I build and maintain personal tools: a Firefox browser extension and a terminal-based HTTP client.
+    Mostly as an excuse to work outside my usual stack.
+
+projects:
+  - title: "Apio"
+    url: "https://github.com/twodigitss/apio"
+    description: "Apio is a Terminal UI tool that runs requests from your local HTTP / REST files."
+    technologies: "Go, Bubbletea, Lipgloss"
+    reversed: false
+
+  - title: "Pageper"
+    url: "https://github.com/twodigitss/Pageper"
+    description: "Keyboard centered, minimalist and distraction free bookmark startup page for browsers."
+    technologies: "React.js, Typescript, TailwindCSS, HTML"
+    reversed: true
+
+experience:
+  - company: "Empresa Confidencial"
+    role: "Software Engineer"
+    period: "2025 — Present"
+    name: "Occupational Health Screening Module"
+    description: >-
+      Real-time tracking screen accessed via QR code: displays the patient's
+      turn, progress through a circular indicator over their profile photo,
+      current status (waiting / being called / completed), and the status of
+      each consulting room. Auto-refreshes via polling every minute.
+    stack: "Angular, C#, SQL Server"
+
+  - company: "Empresa Confidencial"
+    role: "Software Engineer"
+    period: "2025 — Present"
+    name: "Occupational Health Screening Module"
+    description: >-
+      Interactive 3D visualization built on a drone-scanned model of the full
+      plant (blast furnace, boiler areas, weighing stations, and more). A category
+      sidebar (operational areas, administrative areas, services, occupational
+      health) filters and pins matching locations on the map; selecting a category
+      drills into a second-level sidebar listing individual buildings. Choosing a
+      building zooms the camera to it and opens a Google Maps–style popup with
+      name, description, photo, satellite location, external map link, and contact
+      extensions. Free camera navigation is also supported.
+    stack: "Angular, C#, SQL Server"

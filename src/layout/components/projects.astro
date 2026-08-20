@@ -24,23 +24,23 @@ const projects = [
 
 ---
 
-<div class="flex flex-col w-full px-16 ">
-    <section class="flex w-full items-center ">
+<div class="flex flex-col w-full px-4 lg:px-16 overflow-hidden">
+    <section class="flex flex-col lg:flex-row w-full items-start lg:items-center gap-2 lg:gap-0">
 
-        <span class="grid items-center w-full">
-            <p class=" font-sans-flex text-[6rem] m-0 p-0 leading-none font-bold" >
+        <span class="grid items-center w-full lg:w-auto">
+            <p class="font-sans-flex text-[clamp(3.5rem,8vw,6rem)] m-0 p-0 leading-none font-bold">
                 Featured
             </p>
-            <p class=" font-switzer text-[4rem] m-0 p-0 leading-none font-light" >
+            <p class="font-switzer text-[clamp(2.5rem,6vw,4rem)] m-0 p-0 leading-none font-light">
                 Projects
             </p>
         </span>
 
-        <div class="w-full font-normal text-[1.3rem] pb-1 font-sans-flex border-b-[0.1rem]">
+        <div class="w-full lg:flex-1 font-normal text-[clamp(1rem,2vw,1.3rem)] pb-1 font-sans-flex border-b-[0.1rem] lg:mx-4">
             Personal tools built outside of work
         </div>
 
-        <span class="font-sans-flex font-bold text-[9rem] m-0 p-0 text-left leading-none border-l-[0.2rem] pl-12"> {String(projects.length).padStart(2, '0')} </span>
+        <span class="font-sans-flex font-bold text-[clamp(5rem,12vw,9rem)] m-0 p-0 text-left leading-none lg:border-l-[0.2rem] lg:pl-12 self-end lg:self-auto"> {String(projects.length).padStart(2, '0')} </span>
     </section>
 
     <span class="grid pt-20">
